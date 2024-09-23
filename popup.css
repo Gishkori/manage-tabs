@@ -1,24 +1,129 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
 body {
-    width: 20rem;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 450px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e2a39;
+  margin-bottom: 10px;
+}
+
+/* Button Styles */
+.group-btn {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.group-btn:hover {
+  background-color: #187bcd;
+}
+
+/* Tab List Styles */
+.tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+}
+
+.tab-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tab-link {
+  text-decoration: none;
+  color: #1e90ff;
+  display: block;
+  width: 100%;
+  padding-right: 10px;
+}
+
+.tab-link .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1e2a39;
+  margin-bottom: 5px;
+}
+
+.tab-link .pathname {
+  font-size: 0.9rem;
+  color: #6b778c;
+}
+
+.tab-link:hover .title {
+  color: #187bcd;
+}
+
+.tab-link:hover .pathname {
+  color: #1e90ff;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    max-width: 100%;
   }
 
-  ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-    margin: 1rem 0;
+  header h1 {
+    font-size: 1.6rem;
   }
 
-  li {
-    padding: 0.25rem;
+  .group-btn {
+    font-size: 0.9rem;
   }
-  li:nth-child(odd) {
-    background: #80808030;
-  }
-  li:nth-child(even) {
-    background: #ffffff;
-  }
-
-  h3,
-  p {
-    margin: 0;
-  }
+}
